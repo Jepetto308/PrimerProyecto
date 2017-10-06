@@ -5,7 +5,9 @@
  */
 package Action;
 
+import Dao.DaoParametros;
 import Dao.DaoProducto;
+import Model.Parametro;
 import Model.Producto;
 import Utils.Conexion;
 import java.io.FileNotFoundException;
@@ -16,33 +18,31 @@ import java.util.List;
  *
  * @author ASUS
  */
-public class ActionInsertarProducto {
+public class ActionParametros {
     
-    public boolean insertarProducto(Producto oProducto) throws FileNotFoundException{
-        DaoProducto daoProducto = new DaoProducto();
+    public boolean actualizarParametro(Parametro oParametro) throws FileNotFoundException{
+        DaoParametros daoParametros = new DaoParametros();
         Conexion oConexion = new Conexion();
         Connection conn = oConexion.getConexion();
-        daoProducto.insertarProducto(oProducto, conn);
-        
-        return oProducto.getIdProducto() > 0;
+        return daoParametros.actualizarParametro(oParametro, conn);
     }
     
-    public Producto consultarProducto(Producto oProducto){
-        DaoProducto daoProducto = new DaoProducto();
+    public Parametro consultarParametro(String codigo){
+        DaoParametros daoParametros = new DaoParametros();
         Conexion oConexion = new Conexion();
         Connection conn = oConexion.getConexion();
-        oProducto = daoProducto.consultarProducto(oProducto.getIdProducto(), conn);
+        Parametro oParametro = daoParametros.consultarParametro(codigo, conn);
         
-        return oProducto;
+        return oParametro;
     }
     
-    public List listarProductos(){
-        DaoProducto daoProducto = new DaoProducto();
+    public List listarParametros(){
+        DaoParametros daoParametros = new DaoParametros();
         Conexion oConexion = new Conexion();
         Connection conn = oConexion.getConexion();
-        List listaProductos = daoProducto.listarProductos(conn);
+        List listaParametros = daoParametros.listarParametros(conn);
         
-        return listaProductos;
+        return listaParametros;
     }
     
 }
