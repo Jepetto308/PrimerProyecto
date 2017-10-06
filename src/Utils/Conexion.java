@@ -54,15 +54,15 @@ public class Conexion {
         return conexion;
     }
 
-    public static void main(String[] args) {
-//        Conexion cls = new Conexion();
-//        cls.conectar("127.0.0.1", "inventario", "root", "");
-//        try {
-//            PreparedStatement ps = conexion.prepareStatement("INSERT INTO productos (nombre, cantidad, descripcion) VALUES ('Arroz',1,'Arroz Diana por lb')");
-//            ps.executeUpdate();
-//        } catch (SQLException ex) {
-//            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-    }
+//    public static void main(String[] args) {
+////        Conexion cls = new Conexion();
+////        cls.conectar("127.0.0.1", "inventario", "root", "");
+////        try {
+////            PreparedStatement ps = conexion.prepareStatement("INSERT INTO productos (nombre, cantidad, descripcion) VALUES ('Arroz',1,'Arroz Diana por lb')");
+////            ps.executeUpdate();
+////        } catch (SQLException ex) {
+////            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+////        }
+//    }
 
 }

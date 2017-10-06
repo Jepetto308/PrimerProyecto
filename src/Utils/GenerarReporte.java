@@ -123,12 +123,12 @@ public class GenerarReporte {
         reporte.exportReport();
     }
     
-    public static void main(String[] args) {
-        try {
-            GenerarReporte.exportar(FORMATO_PDF, null, null, FORMATO_PDF, true,"");
-        } catch (JRException ex) {
-            Logger.getLogger(GenerarReporte.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
+//    public static void main(String[] args) {
+//        try {
+//            GenerarReporte.exportar(FORMATO_PDF, null, null, FORMATO_PDF, true,"");
+//        } catch (JRException ex) {
+//            Logger.getLogger(GenerarReporte.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//    }
     
 }
